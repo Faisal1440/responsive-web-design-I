@@ -1,3 +1,282 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    
+    font-family: 'Titillium Web', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+/* Your code starts here! */
+body {
+    margin: 0 auto;
+    width: 900px;
+}
+a {
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 14px;
+}
+nav {
+    width:100%;
+    padding: 40px 0 50px 0;
+    word-spacing: 50px;
+}
+
+.birdi{
+ display:flex;
+ justify-content: space-between;
+ align-items: center; 
+ 
+}
+nav a:first-child {
+    padding-left: 0;
+}
+.logo{
+    width: 200px;
+   
+    /* display: flex; */
+    /* padding-left: 120px; */
+}
+header {
+	display: flex;
+    text-align: center;
+
+}
+h1 {
+    font-size: 75px;
+    display: flex;
+    margin-top: 60px;
+}
+.circleimg {
+    display: flex;
+}
+.headerwithbutton {
+    width: 420px;
+	display: flex;
+	flex-direction:column;
+}
+.right {
+    display: flex;
+    width: 420px;
+    vertical-align: top;
+}
+.getstarted {
+    display: block;
+    background-color: white;
+    font-size: 18px;
+    padding: 3px 45px;
+    text-decoration: none;
+    border: 1px solid black;
+    margin: 0 auto;
+    font-family: 'Titillium Web';
+}
+hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+    width: 95%;
+    margin: 60px 0 0 0;
+    border: none;
+}
+.featuresabout {
+    display: flex;
+    width: 420px;
+	margin-bottom: 40px;
+	flex-direction: column;
+}
+
+.ilikeruwaida {
+	display: flex;
+	
+}
+.shelovesme{
+ display: flex;
+}
+
+h2 {
+    font-size: 17px;
+    display: block;
+    margin: 25px 0;
+}
+.serprovis {
+	display: flex;
+	flex-direction: column;
+    width: 280px;
+    margin: 5px;
+}
+p {
+    line-height: 1.2;
+}
+footer {
+    text-align: center;
+    height: 100px;
+    padding: 20px;
+    font-size: 14px;
+}
+.hr2 {
+    color: black;
+    background-color: black;
+    height: 1px;
+    width: 95%;
+    margin: 40px 0 0 0;
+    border: none;
+}
+address {
+    line-height: 1.2;
+}
+
+@media (max-width:800px){
+    .right{
+        display: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .birdi{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    header{
+    justify-content: center;
+    }
+    button {
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    .ilikeruwaida{
+        margin: 0 20px;
+        font-size: 15px;
+    }
+    .middle-img{
+        margin: 0 20px;
+        max-width: 100%;
+        
+        
+    }
+    .shelovesme{
+        margin: 0 20px;
+        font-size: 15px;
+    }
+
+    .contact{
+        margin: 0 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .logo {
+        width: 150px;
+
+    }
+    
+    nav {
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+    }
+    
+    a {
+        width:100%;
+        text-align: center;
+        /* align-items:center; */
+        border-bottom: solid 1px grey;
+        font-size: 15px;
+        padding:20px;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+
+    }
+
+    .headerwithbutton{
+        align-items: center;
+    }
+
+     .ilikeruwaida {
+         flex-direction: column;
+         /* width:100%; */
+     }
+     .shelovesme{
+        flex-direction: column;
+        
+     }
+
+     .serprovis{
+         width: 100%;
+     }
+
+     .middle-img{
+         width: 400px;
+     }
+     
+}
